@@ -56,11 +56,36 @@ License: You must have a valid license purchased only from https://themes.getboo
 		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
 
 		<style>
-		 body{
-			 font-family: Arial, Helvetica, sans-serif;
-			 
-		 }
-		 .k-login-v2 .k-login-v2__body .k-login-v2__body-wrapper {
+			body{
+
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.k-header.k-header--fixed {
+			position: fixed;
+			top: 0;
+			z-index: 97;
+			width: 100%;
+			left:0;
+			}
+
+			
+			.has-search .form-control {
+				padding-left: 2.375rem;
+				border: 1px solid #646c9a;
+			}
+
+			.has-search .form-control-feedback {
+				position: absolute;
+				z-index: 2;
+				display: block;
+				width: 2.375rem;
+				height: 2.375rem;
+				line-height: 3.375rem;
+				text-align: center;
+				pointer-events: none;
+				color: black;
+			}
+			.k-login-v2 .k-login-v2__body .k-login-v2__body-wrapper {
 				width:100%;
 				justify-content: center;
 				display: -webkit-box;
@@ -74,7 +99,8 @@ License: You must have a valid license purchased only from https://themes.getboo
                 width: 100%;
 				left:0;
 			}
-		</style>
+
+	</style>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 
@@ -91,17 +117,40 @@ License: You must have a valid license purchased only from https://themes.getboo
 				<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
 						<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
 							<ul class="k-menu__nav ">
-								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="index.html" class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
-								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="technical-posts.html" class="k-menu__link "><span class="k-menu__link-text">Technical</span></a></li>
-								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Personal Life</span></a></li>
-								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Carrer Guide</span></a></li>
-								 
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel k-menu__item--active"  ><a href="index.html" class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="technical-posts.html" class="k-menu__link "><span class="k-menu__link-text">Programming</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Software Engineering</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Blockchain</span></a></li>
+								
 							</ul>
 						</div>
 				</div>
 
 				<!-- end: Header Menu -->
+				<div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
+                            <div class=" k-grid__item  align-items-center mx-2">
 
+                                <!--begin: Search -->
+                                
+                                <a class="k-link" href="login.html">Login</a>
+                                <span class="mx-2"> / </span>
+                                <a class="k-link" href="register.html">Register</a>
+                                <!--end: Search -->
+    
+                            </div>
+                            <!--begin: Search -->
+                            <form>
+                                <div class="has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                            </form>
+							
+							<!--end: Search -->
+
+							
+							
+                        </div>
 				
 			</div>
 
@@ -230,9 +279,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 		<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
 		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 		<script src="../assets/vendors/custom/theme/framework/vendors/sweetalert2/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
+		
 		<script src="../assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
 
 		<!--end:: Global Optional Vendors -->
