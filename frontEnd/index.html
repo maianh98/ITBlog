@@ -1,701 +1,561 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
 
-	<!-- begin::Head -->
-	<head>
-		<meta charset="utf-8" />
-		<title>Home | Blog List</title>
-		<meta name="description" content="Blog list example">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- begin::Head -->
 
-		<!--begin::Web font -->
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
-			WebFont.load({
-                google: {"families":["Poppins:300,400,500,600,700","Raleway:300,400,500,600,700"]},
-                active: function() {
-                    sessionStorage.fonts = true;
-                }
-            });
-        </script>
-		<!--end::Web font -->
+<head>
+    <meta charset="utf-8" />
+    <title>Home | Blog List</title>
+    <meta name="description" content="Blog list example">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<!--begin::Page Custom Styles -->
-		<link href="../assets/custom/blog/list.css" rel="stylesheet" type="text/css" />
+    <!--begin::Web font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Poppins:300,400,500,600,700", "Raleway:300,400,500,600,700"]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Web font -->
 
-		<!--end::Page Custom Styles -->
+    <!--begin::Page Custom Styles -->
+    <link href="../assets/custom/blog/list.css" rel="stylesheet" type="text/css" />
 
-		<!--begin:: Global Mandatory Vendors -->
-		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Custom Styles -->
 
-		<!--end:: Global Mandatory Vendors -->
+    <!--begin:: Global Mandatory Vendors -->
+    <link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet"
+        type="text/css" />
 
-		<!--begin:: Global Optional Vendors -->
-	
-		<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+    <!--end:: Global Mandatory Vendors -->
 
-		<!--end:: Global Optional Vendors -->
+    <!--begin:: Global Optional Vendors -->
 
-		<!--begin::Global Theme Styles -->
-		<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
 
-		<!--end::Global Theme Styles -->
+    <!--end:: Global Optional Vendors -->
 
-		<!--begin::Layout Skins -->
-		<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <!--begin::Global Theme Styles -->
+    <link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
-        <!--end::Layout Skins -->
-        <style>
-                body{
-                    color: black;
-                }
-                .k-header.k-header--fixed {
-                position: fixed;
-                top: 0;
-                z-index: 97;
-                width: 100%;
-                left:0;
-                }
+    <!--end::Global Theme Styles -->
 
-                
-                .has-search .form-control {
-                    padding-left: 2.375rem;
-                    border: 1px solid #646c9a;
-                }
+    <!--begin::Layout Skins -->
+    <link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
 
-                .has-search .form-control-feedback {
-                    position: absolute;
-                    z-index: 2;
-                    display: block;
-                    width: 2.375rem;
-                    height: 2.375rem;
-                    line-height: 3.375rem;
-                    text-align: center;
-                    pointer-events: none;
-                    color: black;
-                }
+    <!--end::Layout Skins -->
+    <style>
+        body {
+            color: black;
+        }
 
-        </style>
-	</head>
+        .k-header.k-header--fixed {
+            position: fixed;
+            top: 0;
+            z-index: 97;
+            width: 100%;
+            left: 0;
+        }
 
-	<!-- end::Head -->
 
-	<!-- begin::Body -->
-	<body class="k-header--fixed k-header-mobile--fixed ">
+        .has-search .form-control {
+            padding-left: 2.375rem;
+            border: 1px solid #646c9a;
+        }
 
-		<!-- begin:: Page -->
+        .has-search .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 3.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: black;
+        }
+    </style>
+</head>
 
-		<!-- begin:: Header Mobile -->
-		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
-			<div class="k-header-mobile__logo">
-				<a href="index.html">
-					<h4>IT Blog</h4>
-				</a>
-			</div>
-			<div class="k-header-mobile__toolbar">
-			
-				<button class="k-header-mobile__toolbar-toggler" id="k_header_mobile_toggler"><span></span></button>
-				
-			</div>
-		</div>
+<!-- end::Head -->
 
-		<!-- end:: Header Mobile -->
-		<div class="k-grid k-grid--hor k-grid--root">
-			<div class="k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page">
+<!-- begin::Body -->
 
-			
-				<div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper" id="k_wrapper">
+<body class="k-header--fixed k-header-mobile--fixed ">
 
-					<!-- begin:: Header -->
-					<div id="k_header" class="k-header k-grid__item  k-header--fixed ">
+    <!-- begin:: Page -->
 
-						<!-- begin: Header Menu -->
-						<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
-						<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
-                                <div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
-                                    <ul class="k-menu__nav ">
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel k-menu__item--active"  ><a href="index.html" class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="technical-posts.html" class="k-menu__link "><span class="k-menu__link-text">Programming</span></a></li>
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="software-post.html" class="k-menu__link "><span class="k-menu__link-text">Software Engineering</span></a></li>
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="blockchain-post.html" class="k-menu__link "><span class="k-menu__link-text">Blockchain</span></a></li>
-                                        
-                                    </ul>
-                                    
-                                </div>
-                                
-                                
-                                  
+    <!-- begin:: Header Mobile -->
+    <div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
+        <div class="k-header-mobile__logo">
+            <a href="index.html">
+                <h4>IT Blog</h4>
+            </a>
+        </div>
+        <div class="k-header-mobile__toolbar">
+
+            <button class="k-header-mobile__toolbar-toggler" id="k_header_mobile_toggler"><span></span></button>
+
+        </div>
+    </div>
+
+    <!-- end:: Header Mobile -->
+    <div class="k-grid k-grid--hor k-grid--root">
+        <div class="k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page">
+
+
+            <div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper" id="k_wrapper">
+
+                <!-- begin:: Header -->
+                <div id="k_header" class="k-header k-grid__item  k-header--fixed ">
+
+                    <!-- begin: Header Menu -->
+                    <button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i
+                            class="la la-close"></i></button>
+                    <div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
+                        <div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
+                            <ul class="k-menu__nav ">
+                                <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel k-menu__item--active">
+                                    <a href="index.html" class="k-menu__link "><span
+                                            class="k-menu__link-text">Home</span></a></li>
+                                <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+                                        href="technical-posts.html" class="k-menu__link "><span
+                                            class="k-menu__link-text">Programming</span></a></li>
+                                <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+                                        href="software-post.html" class="k-menu__link "><span
+                                            class="k-menu__link-text">Software Engineering</span></a></li>
+                                <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+                                        href="blockchain-post.html" class="k-menu__link "><span
+                                            class="k-menu__link-text">Blockchain</span></a></li>
+
+                            </ul>
+
                         </div>
-                        
-						<!-- end: Header Menu -->
-                        <div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
-                            <div class=" k-grid__item  align-items-center mx-2">
 
-                                <a href="create-post.html" class="btn btn-success">Create your blog</a>
-            
-                            </div>
-                            <div class=" k-grid__item  align-items-center mx-2">
 
-                                <!--begin: Search -->
-                                
-                                <a class="k-link" href="login.html">Login</a>
-                                <span class="mx-2"> / </span>
-                                <a class="k-link" href="register.html">Register</a>
-                                <!--end: Search -->
-    
-                            </div>
+
+                    </div>
+
+                    <!-- end: Header Menu -->
+                    <div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
+                        <div class=" k-grid__item  align-items-center mx-2">
+
+                            <a href="create-post.html" class="btn btn-success">Create your blog</a>
+
+                        </div>
+                        <div class=" k-grid__item  align-items-center mx-2">
+
                             <!--begin: Search -->
-                            <form>
-                                <div class="has-search">
-                                    <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
-                            </form>
-							
-							<!--end: Search -->
 
-							
-							
+                            <a class="k-link" href="login.html">Login</a>
+                            <span class="mx-2"> / </span>
+                            <a class="k-link" href="register.html">Register</a>
+                            <!--end: Search -->
+
                         </div>
-                        
-						
-					</div>
-
-					<!-- end:: Header -->
-
-					<!-- begin:: Content -->
-					<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
-
-						
-
-						<!-- begin:: Content Body -->
-						<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
-                            <div class="row">
-                                
-                                <div class="col-md-8">
-                                        <div class="col-12 ">
-                                                <h2>Hot news</h2>
-                                        </div>
-                                        <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/javascript.jpg);">
-                                                                    <a href="view-post.html" class="k-blog-list__link"><img src="../assets/media/blog/javascript.jpg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="view-post.html" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                                Learning How to Learn JavaScript
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                            Nov 18, 2018
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            Navigating the vast ecosystem of modern JavaScript is a daunting task.
-                                                                             There is a wide array of front-end frameworks, a handful of module bundlers, and 1000s of utility libraries 
-                                                                             — not to mention all of the Node.js modules that can run on your machine or server. 
-                                                                            How do you know where to start? On which topics should you be spending your time?    
-                                                                    </div>
-                                                                    <a href="view-post.html" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/programing.png);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/programing.png" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                            Top Programming Languages to Learn in 2019
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                                May 20, 2019
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            Deciding which programming languages to learn is one of the most enjoyable things we get to do as software engineers, 
-                                                                            but it is also incredibly impactful on our career and the types of jobs we will be able to find. 
-                                                                            The opportunity cost of learning a programming language means it takes time away from learning something else, 
-                                                                            so we must be efficient where we focus our efforts to ensure we are set up for success now and in the future.
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                                Version 8 of Angular — Smaller bundles, CLI APIs, and alignment with the ecosystem
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                            Nov 18, 2018
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            The 8.0.0 release of Angular is here! This is a major release spanning the entire platform, 
-                                                                            including the framework, Angular Material, and the CLI with synchronized major versions. 
-                                                                            This release improves application startup time on modern browsers, 
-                                                                            provides new APIs for tapping into the CLI, and aligns Angular to the ecosystem and more web standards.    
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                           How to clear cookie from your browser?
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                                June 1, 2019
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                          13 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                           Cookies are usually delectable delights, but web cookies can sometimes be less than delightful. 
-									   These little files hide in your computer so that your browser and websites can track your browsing sessions and 
-									   save certain useful information, such as account names and passwords, for later retrieval. Although cookies 
-									   may seem harmless overall, they can threaten your privacy if an attacker tries to use them maliciously.
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-								 <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                            How to disable your laptop touchpad
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                                Jan 30, 2019
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            The touchpad has been the standard laptop pointing device for years. Since touchpads are built into a laptop, 
-									    they work well when you don’t want to carry around another pointing device. Even when a mouse or another 
-									    pointing device is available, some users prefer the feel of a touchpad above anything else. But whether you 
-									    love touchpads or just tolerate them, they still get in the way sometimes
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-								 <div class="col-xl-8">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                           The best laptops: Premium laptops, cheap laptops, 2-in-1s, and more
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                                Mar 14, 2019
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                           The laptop world is a-changing. New CPUs and GPUs—yes, mobile discrete GPUs—are bringing forth laptops 
-									    that are thinner, lighter, and faster than ever, even gaming laptops. And the advances keep coming: 
-									    After a busy round of CES announcements in January, Intel and Nvidia have welcomed spring with yet 
-									    another round of products: the 9th generation of Core mobile processors, and mobile GeForce GTX 1650 
-									    and 1660 Ti graphics. 
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-xl-4">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                            <div class="row">
-                                                <ul class="pagination pagination--grid">
-                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                </ul>
-                                            </div>
-                                </div>
-				     
-                                <div class="col">
-                                        <div class="col-12">
-                                                <h2>Recent posts</h2>
-                                        </div>
-                                        <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/programing.png);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/programing.png" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                            Top Programming Languages to Learn in 2019
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                                May 20, 2019
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            Deciding which programming languages to learn is one of the most enjoyable things we get to do as software engineers, 
-                                                                            but it is also incredibly impactful on our career and the types of jobs we will be able to find. 
-                                                                            The opportunity cost of learning a programming language means it takes time away from learning something else, 
-                                                                            so we must be efficient where we focus our efforts to ensure we are set up for success now and in the future.
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                                Version 8 of Angular — Smaller bundles, CLI APIs, and alignment with the ecosystem
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                            Nov 18, 2018
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            The 8.0.0 release of Angular is here! This is a major release spanning the entire platform, 
-                                                                            including the framework, Angular Material, and the CLI with synchronized major versions. 
-                                                                            This release improves application startup time on modern browsers, 
-                                                                            provides new APIs for tapping into the CLI, and aligns Angular to the ecosystem and more web standards.    
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="k-portlet">
-                                                <div class="k-portlet__body">
-                                                    <div class="k-blog-list">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/javascript.jpg);">
-                                                                    <a href="" class="k-blog-list__link"><img src="../assets/media/blog/javascript.jpg" class="k-blog-list__image" /></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="k-blog-list__body">
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <h2 class="k-blog-list__title">
-                                                                                Learning How to Learn JavaScript
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="k-blog-list__meta">
-                                                                        <div class="k-blog-list__date">
-                                                                            Nov 18, 2018
-                                                                        </div>
-                                                                        <div class="k-blog-list__author">
-                                                                            By <a href="" class="k-blog-list__link">Admin</a>
-                                                                        </div>
-                                                                        <div class="k-blog-list__comments">
-                                                                            24 Comments
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="k-blog-list__content">
-                                                                            Navigating the vast ecosystem of modern JavaScript is a daunting task.
-                                                                             There is a wide array of front-end frameworks, a handful of module bundlers, and 1000s of utility libraries 
-                                                                             — not to mention all of the Node.js modules that can run on your machine or server. 
-                                                                            How do you know where to start? On which topics should you be spending your time?    
-                                                                    </div>
-                                                                    <a href="" class="k-blog-list__link">
-                                                                        <span>Read More</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <ul class="pagination pagination--grid">
-                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                </ul>
-                                            </div>
-                                </div>
+                        <!--begin: Search -->
+                        <form>
+                            <div class="has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
                             </div>
-							
-						</div>
+                        </form>
 
-						<!-- end:: Content Body -->
-					</div>
+                        <!--end: Search -->
 
-					<!-- end:: Content -->
 
-					<!-- begin:: Footer -->
-					
 
-					<!-- end:: Footer -->
-				</div>
-			</div>
-		</div>
+                    </div>
 
-		<!-- end:: Page -->
 
-		<!-- begin:: Topbar Offcanvas Panels -->
+                </div>
 
-		<!-- begin::Offcanvas Toolbar Search -->
-		
+                <!-- end:: Header -->
 
-		<!-- end::Offcanvas Toolbar Search -->
+                <!-- begin:: Content -->
+                <div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
 
-		<!-- begin::Offcanvas Toolbar Quick Actions -->
-		
 
-		<!-- end::Offcanvas Toolbar Quick Actions -->
 
-		<!-- end:: Topbar Offcanvas Panels -->
+                    <!-- begin:: Content Body -->
+                    <div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
+                        <div class="row">
 
-		<!-- begin::Quick Panel -->
-		
+                            <div class="col-md-8">
+                                <div class="col-12 ">
+                                    <h2>Hot news</h2>
+                                </div>
+                                <div class="k-portlet">
+                                    <div class="k-portlet__body">
+                                        <div class="k-blog-list">
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="k-blog-list__head"
+                                                        style="background-image:url(../assets/media/blog/javascript.jpg);">
+                                                        <a href="view-post.html" class="k-blog-list__link"><img
+                                                                src="../assets/media/blog/javascript.jpg"
+                                                                class="k-blog-list__image" /></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-8">
+                                                    <div class="k-blog-list__body">
+                                                        <a href="view-post.html" class="k-blog-list__link">
+                                                            <h2 class="k-blog-list__title">
+                                                                Learning How to Learn JavaScript
+                                                            </h2>
+                                                        </a>
+                                                        <div class="k-blog-list__meta">
+                                                            <div class="k-blog-list__date">
+                                                                Nov 18, 2018
+                                                            </div>
+                                                            <div class="k-blog-list__author">
+                                                                By <a href="" class="k-blog-list__link">Admin</a>
+                                                            </div>
+                                                            <div class="k-blog-list__comments">
+                                                                24 Comments
+                                                            </div>
+                                                        </div>
+                                                        <div class="k-blog-list__content">
+                                                            Navigating the vast ecosystem of modern JavaScript is a
+                                                            daunting task.
+                                                            There is a wide array of front-end frameworks, a handful of
+                                                            module bundlers, and 1000s of utility libraries 
+                                                            — not to mention all of the Node.js modules that can run on
+                                                            your machine or server.
+                                                            How do you know where to start? On which topics should you
+                                                            be spending your time?
+                                                        </div>
+                                                        <a href="view-post.html" class="k-blog-list__link">
+                                                            <span>Read More</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="k-portlet">
+                                    <div class="k-portlet__body">
+                                        <div class="k-blog-list">
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="k-blog-list__head"
+                                                        style="background-image:url(../assets/media/blog/programing.png);">
+                                                        <a href="" class="k-blog-list__link"><img
+                                                                src="../assets/media/blog/programing.png"
+                                                                class="k-blog-list__image" /></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-8">
+                                                    <div class="k-blog-list__body">
+                                                        <a href="" class="k-blog-list__link">
+                                                            <h2 class="k-blog-list__title">
+                                                                Top Programming Languages to Learn in 2019
+                                                            </h2>
+                                                        </a>
+                                                        <div class="k-blog-list__meta">
+                                                            <div class="k-blog-list__date">
+                                                                May 20, 2019
+                                                            </div>
+                                                            <div class="k-blog-list__author">
+                                                                By <a href="" class="k-blog-list__link">Admin</a>
+                                                            </div>
+                                                            <div class="k-blog-list__comments">
+                                                                24 Comments
+                                                            </div>
+                                                        </div>
+                                                        <div class="k-blog-list__content">
+                                                            Deciding which programming languages to learn is one of the
+                                                            most enjoyable things we get to do as software engineers,
+                                                            but it is also incredibly impactful on our career and the
+                                                            types of jobs we will be able to find.
+                                                            The opportunity cost of learning a programming language
+                                                            means it takes time away from learning something else,
+                                                            so we must be efficient where we focus our efforts to ensure
+                                                            we are set up for success now and in the future.
+                                                        </div>
+                                                        <a href="" class="k-blog-list__link">
+                                                            <span>Read More</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <ul class="pagination pagination--grid">
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        </ul>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="col">
+                                    <div class="col-12">
+                                            <h2>Recent posts</h2>
+                                    </div>
+                                    <div class="k-portlet">
+                                            <div class="k-portlet__body">
+                                                <div class="k-blog-list">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/programing.png);">
+                                                                <a href="" class="k-blog-list__link"><img src="../assets/media/blog/programing.png" class="k-blog-list__image"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__body">
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <h2 class="k-blog-list__title">
+                                                                        Top Programming Languages to Learn in 2019
+                                                                    </h2>
+                                                                </a>
+                                                                <div class="k-blog-list__meta">
+                                                                    <div class="k-blog-list__date">
+                                                                            May 20, 2019
+                                                                    </div>
+                                                                    <div class="k-blog-list__author">
+                                                                        By <a href="" class="k-blog-list__link">Admin</a>
+                                                                    </div>
+                                                                    <div class="k-blog-list__comments">
+                                                                        24 Comments
+                                                                    </div>
+                                                                </div>
+                                                                <div class="k-blog-list__content">
+                                                                        Deciding which programming languages to learn is one of the most enjoyable things we get to do as software engineers, 
+                                                                        but it is also incredibly impactful on our career and the types of jobs we will be able to find. 
+                                                                        The opportunity cost of learning a programming language means it takes time away from learning something else, 
+                                                                        so we must be efficient where we focus our efforts to ensure we are set up for success now and in the future.
+                                                                </div>
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <span>Read More</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="k-portlet">
+                                            <div class="k-portlet__body">
+                                                <div class="k-blog-list">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/angular8.jpeg);">
+                                                                <a href="" class="k-blog-list__link"><img src="../assets/media/blog/angular8.jpeg" class="k-blog-list__image"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__body">
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <h2 class="k-blog-list__title">
+                                                                            Version 8 of Angular — Smaller bundles, CLI APIs, and alignment with the ecosystem
+                                                                    </h2>
+                                                                </a>
+                                                                <div class="k-blog-list__meta">
+                                                                    <div class="k-blog-list__date">
+                                                                        Nov 18, 2018
+                                                                    </div>
+                                                                    <div class="k-blog-list__author">
+                                                                        By <a href="" class="k-blog-list__link">Admin</a>
+                                                                    </div>
+                                                                    <div class="k-blog-list__comments">
+                                                                        24 Comments
+                                                                    </div>
+                                                                </div>
+                                                                <div class="k-blog-list__content">
+                                                                        The 8.0.0 release of Angular is here! This is a major release spanning the entire platform, 
+                                                                        including the framework, Angular Material, and the CLI with synchronized major versions. 
+                                                                        This release improves application startup time on modern browsers, 
+                                                                        provides new APIs for tapping into the CLI, and aligns Angular to the ecosystem and more web standards.    
+                                                                </div>
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <span>Read More</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="k-portlet">
+                                            <div class="k-portlet__body">
+                                                <div class="k-blog-list">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__head" style="background-image:url(../assets/media/blog/javascript.jpg);">
+                                                                <a href="" class="k-blog-list__link"><img src="../assets/media/blog/javascript.jpg" class="k-blog-list__image"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="k-blog-list__body">
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <h2 class="k-blog-list__title">
+                                                                            Learning How to Learn JavaScript
+                                                                    </h2>
+                                                                </a>
+                                                                <div class="k-blog-list__meta">
+                                                                    <div class="k-blog-list__date">
+                                                                        Nov 18, 2018
+                                                                    </div>
+                                                                    <div class="k-blog-list__author">
+                                                                        By <a href="" class="k-blog-list__link">Admin</a>
+                                                                    </div>
+                                                                    <div class="k-blog-list__comments">
+                                                                        24 Comments
+                                                                    </div>
+                                                                </div>
+                                                                <div class="k-blog-list__content">
+                                                                        Navigating the vast ecosystem of modern JavaScript is a daunting task.
+                                                                         There is a wide array of front-end frameworks, a handful of module bundlers, and 1000s of utility libraries 
+                                                                         — not to mention all of the Node.js modules that can run on your machine or server. 
+                                                                        How do you know where to start? On which topics should you be spending your time?    
+                                                                </div>
+                                                                <a href="" class="k-blog-list__link">
+                                                                    <span>Read More</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="pagination pagination--grid">
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            </ul>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
 
-		<!-- end::Quick Panel -->
+                <!-- end:: Content -->
 
-		<!-- begin::Scrolltop -->
-		<div id="k_scrolltop" class="k-scrolltop">
-			<i class="la la-arrow-up"></i>
-		</div>
+                <!-- begin:: Footer -->
 
-		<!-- end::Scrolltop -->
 
-		<!-- begin::Sticky Toolbar -->
-		
+                <!-- end:: Footer -->
+            </div>
+        </div>
+    </div>
 
-		<!-- end::Sticky Toolbar -->
+    <!-- end:: Page -->
 
-		<!-- begin::Demo Panel -->
-		
+    <!-- begin:: Topbar Offcanvas Panels -->
 
-		<!-- end::Demo Panel -->
+    <!-- begin::Offcanvas Toolbar Search -->
 
-		<!-- begin::Global Config -->
-		<script>
-			var KAppOptions = {
-				"colors": {
-					"state": {
-						"brand": "#5d78ff",
-						"metal": "#c4c5d6",
-						"light": "#ffffff",
-						"accent": "#00c5dc",
-						"primary": "#5867dd",
-						"success": "#34bfa3",
-						"info": "#36a3f7",
-						"warning": "#ffb822",
-						"danger": "#fd3995",
-						"focus": "#9816f4"
-					},
-					"base": {
-						"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
-						"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
-					}
-				}
-			};
-		</script>
 
-		<!-- end::Global Config -->
+    <!-- end::Offcanvas Toolbar Search -->
 
-		<!--begin:: Global Mandatory Vendors -->
-		<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-		
-		<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-		<!--end:: Global Mandatory Vendors -->
+    <!-- begin::Offcanvas Toolbar Quick Actions -->
 
-		<!--begin:: Global Optional Vendors -->
-	
-		<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/theme/framework/vendors/sweetalert2/init.js" type="text/javascript"></script>
 
-		<!--end:: Global Optional Vendors -->
+    <!-- end::Offcanvas Toolbar Quick Actions -->
 
-		<!--begin::Global Theme Bundle -->
-		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+    <!-- end:: Topbar Offcanvas Panels -->
 
-		<!--end::Global Theme Bundle -->
+    <!-- begin::Quick Panel -->
 
-		<!--begin::Global App Bundle -->
-		<script src="../assets/app/scripts/bundle/app.bundle.js" type="text/javascript"></script>
 
-		<!--end::Global App Bundle -->
-	</body>
+    <!-- end::Quick Panel -->
 
-	<!-- end::Body -->
+    <!-- begin::Scrolltop -->
+    <div id="k_scrolltop" class="k-scrolltop">
+        <i class="la la-arrow-up"></i>
+    </div>
+
+    <!-- end::Scrolltop -->
+
+    <!-- begin::Sticky Toolbar -->
+
+
+    <!-- end::Sticky Toolbar -->
+
+    <!-- begin::Demo Panel -->
+
+
+    <!-- end::Demo Panel -->
+
+    <!-- begin::Global Config -->
+    <script>
+        var KAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#5d78ff",
+                    "metal": "#c4c5d6",
+                    "light": "#ffffff",
+                    "accent": "#00c5dc",
+                    "primary": "#5867dd",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995",
+                    "focus": "#9816f4"
+                },
+                "base": {
+                    "label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+                    "shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+                }
+            }
+        };
+    </script>
+
+    <!-- end::Global Config -->
+
+    <!--begin:: Global Mandatory Vendors -->
+    <script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+    <script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+    <!--end:: Global Mandatory Vendors -->
+
+    <!--begin:: Global Optional Vendors -->
+
+    <script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
+    <script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+    <script src="../assets/vendors/custom/theme/framework/vendors/sweetalert2/init.js" type="text/javascript"></script>
+
+    <!--end:: Global Optional Vendors -->
+
+    <!--begin::Global Theme Bundle -->
+    <script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
+
+    <!--begin::Global App Bundle -->
+    <script src="../assets/app/scripts/bundle/app.bundle.js" type="text/javascript"></script>
+
+    <!--end::Global App Bundle -->
+</body>
+
+<!-- end::Body -->
+
 </html>
