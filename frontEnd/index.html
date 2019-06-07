@@ -12,7 +12,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<!--begin::Web font -->
-
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+                google: {"families":["Poppins:300,400,500,600,700","Raleway:300,400,500,600,700"]},
+                active: function() {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
 		<!--end::Web font -->
 
 		<!--begin::Page Custom Styles -->
@@ -51,7 +59,6 @@
         <style>
                 body{
                     color: black;
-                    font-family: Arial, Helvetica, sans-serif;
                 }
                 .k-header.k-header--fixed {
                 position: fixed;
@@ -120,8 +127,8 @@
                                     <ul class="k-menu__nav ">
                                         <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel k-menu__item--active"  ><a href="index.html" class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
                                         <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="technical-posts.html" class="k-menu__link "><span class="k-menu__link-text">Programming</span></a></li>
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Software Engineering</span></a></li>
-                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="" class="k-menu__link "><span class="k-menu__link-text">Blockchain</span></a></li>
+                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="software-post.html" class="k-menu__link "><span class="k-menu__link-text">Software Engineering</span></a></li>
+                                        <li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "  ><a href="blockchain-post.html" class="k-menu__link "><span class="k-menu__link-text">Blockchain</span></a></li>
                                         
                                     </ul>
                                     
@@ -133,6 +140,11 @@
                         
 						<!-- end: Header Menu -->
                         <div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
+                            <div class=" k-grid__item  align-items-center mx-2">
+
+                                <a href="create-post.html" class="btn btn-success">Create your blog</a>
+            
+                            </div>
                             <div class=" k-grid__item  align-items-center mx-2">
 
                                 <!--begin: Search -->
