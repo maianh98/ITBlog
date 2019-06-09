@@ -739,8 +739,14 @@
 
 
 
-			$('.edit').click(function () {
-				editHandler();
+			$('#category .edit').click(function () {
+				window.location.href = 'category-edit.html'
+			});
+			$('#user .edit').click(function () {
+				window.location.href = 'edit-user.html'
+			});
+			$('#post .edit').click(function () {
+				window.location.href = 'edit-post.html'
 			});
 
 			$('.delete').click(function () {
