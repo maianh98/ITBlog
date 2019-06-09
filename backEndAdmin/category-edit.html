@@ -196,7 +196,7 @@
                                                                 <td>Personal life</td>
                                                                 <td>2</td>
                                                                 <td class="d-flex justify-content-center">
-                                                                        <span class="btn btn-sm btn-primary edit m-1">Edit</span>
+                                                                        <span class="btn btn-sm btn-primary edit m-1 " data-cate="Personal life">Edit</span>
                                                                         <span class="btn btn-sm btn-danger delete m-1">Delete</span>
                                                                 </td>
                                                             </tr>
@@ -205,7 +205,7 @@
                                                                 <td>Technical</td>
                                                                 <td>2</td>
                                                                 <td class="d-flex justify-content-center">
-                                                                        <span class="btn btn-sm btn-primary edit m-1">Edit</span>
+                                                                        <span class="btn btn-sm btn-primary edit m-1" data-cate="Technical">Edit</span>
                                                                         <span class="btn btn-sm btn-danger delete m-1">Delete</span>
                                                                 </td>
                                                             </tr>
@@ -214,7 +214,7 @@
                                                                 <td>Carrer Guide</td>
                                                                 <td>3</td>
                                                                 <td class="d-flex justify-content-center">
-                                                                        <span class="btn btn-sm btn-primary edit m-1">Edit</span>
+                                                                        <span class="btn btn-sm btn-primary edit m-1" data-cate="Carrer Guide">Edit</span>
                                                                         <span class="btn btn-sm btn-danger delete m-1">Delete</span>
                                                                 </td>
                                                             </tr>
@@ -231,7 +231,7 @@
                                                         <div class="col-4">
                                                                 <div class="form-group">
                                                                         <h4 class="">Select category to edit :</h4>
-                                                                        <select name="" id="" class="form-control">
+                                                                        <select name="" id="cate-select" class="form-control">
                                                                                 <option value="">Technical</option>
                                                                                 <option value="">Carrer Guide</option>
                                                                                 <option value="">Personal life</option>
@@ -243,7 +243,7 @@
                                                         <div class="col-4">
                                                                 <div class="form-group">
                                                                         <h4 class="">Enter new name :</h4>
-                                                                        <input type="text" class="form-control">
+                                                                        <input type="text" class="form-control" id="cate-text" value="Technical">
                                                                         
                                                                 </div>
                                                                 <div class="row mt-2 ">
@@ -348,10 +348,11 @@
 		<script>
 			
 			$(document).ready(function(){
+				$('#cate-text').focus();
 				
-				
-				$('.edit').click(function(){
-					editHandler();
+				$('.edit').click(function(e){
+					$('#cate-text').val('Edit Category');
+					$('#cate-text').focus();
 				});
 	
 				$('.delete').click(function(){
