@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- begin::Head -->
+
+<head>
+	<meta charset="utf-8" />
+	<title>View Post | Windows 10: A guide to the updates</title>
+	<meta name="description" content="Blog list example">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				"families": ["Poppins:300,400,500,600,700", "Raleway:300,400,500,600,700"]
+			},
+			active: function () {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+	<!--begin::Page Custom Styles -->
+	<link href="../assets/custom/blog/list.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/custom/blog/post.css" rel="stylesheet" type="text/css">
+
+	<!--end::Page Custom Styles -->
+
+	<!--begin:: Global Mandatory Vendors -->
+	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet"
+		type="text/css" />
+
+	<!--end:: Global Mandatory Vendors -->
+
+	<!--begin:: Global Optional Vendors -->
+
+	<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+
+	<!--end:: Global Optional Vendors -->
+
+	<!--begin::Global Theme Styles -->
+	<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+
+	<!--end::Global Theme Styles -->
+
+	<!--begin::Layout Skins -->
+	<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+
+	<!--end::Layout Skins -->
+	<style>
+		body {
+			color: black;
+		}
+		.k-header.k-header--fixed {
+			position: fixed;
+			top: 0;
+			z-index: 97;
+			width: 100%;
+			left: 0;
+		}
+		.has-search .form-control {
+			padding-left: 2.375rem;
+			border: 1px solid #646c9a;
+		}
+		.has-search .form-control-feedback {
+			position: absolute;
+			z-index: 2;
+			display: block;
+			width: 2.375rem;
+			height: 2.375rem;
+			line-height: 3.375rem;
+			text-align: center;
+			pointer-events: none;
+			color: black;
+		}
+	</style>
+</head>
+
+<!-- end::Head -->
+
+<!-- begin::Body -->
+
+<body class="k-header--fixed k-header-mobile--fixed ">
+
+	<!-- begin:: Page -->
+
+	<!-- begin:: Header Mobile -->
+	<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
+		<div class="k-header-mobile__logo">
+			<a href="index.html">
+				<h4>IT Blog</h4>
+			</a>
+		</div>
+		<div class="k-header-mobile__toolbar">
+
+			<button class="k-header-mobile__toolbar-toggler" id="k_header_mobile_toggler"><span></span></button>
+
+		</div>
+	</div>
+
+	<!-- end:: Header Mobile -->
+	<div class="k-grid k-grid--hor k-grid--root">
+		<div class="k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page">
+
+
+			<div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper" id="k_wrapper">
+
+				<!-- begin:: Header -->
+				<div id="k_header" class="k-header k-grid__item  k-header--fixed ">
+
+					<!-- begin: Header Menu -->
+					<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i
+							class="la la-close"></i></button>
+					<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
+						<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
+							<ul class="k-menu__nav ">
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a href="index.html"
+										class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="technical-posts.html" class="k-menu__link "><span
+											class="k-menu__link-text">Programming</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="software-post.html" class="k-menu__link "><span
+											class="k-menu__link-text">Software Engineering</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="blockchain-post.html" class="k-menu__link "><span
+											class="k-menu__link-text">Blockchain</span></a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<!-- end: Header Menu -->
+					<div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
+						<div class=" k-grid__item  align-items-center mx-2">
+
+							<a href="create-post.html" class="btn btn-success">Create your blog</a>
+
+						</div>
+						<div class=" k-grid__item  align-items-center mx-2">
+
+							<!--begin: Search -->
+
+							<a class="k-link" href="login.html">Login</a>
+							<span class="mx-2"> / </span>
+							<a class="k-link" href="register.html">Register</a>
+							<!--end: Search -->
+
+						</div>
+						<!--begin: Search -->
+						<form>
+							<div class="has-search">
+								<span class="fa fa-search form-control-feedback"></span>
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+						</form>
+
+						<!--end: Search -->
+
+
+
+					</div>
+
+				</div>
+
+				<!-- end:: Header -->
+
+				<!-- begin:: Content -->
+				<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
+
+
+
+					<!-- begin:: Content Body -->
+					<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
+						<div class="row">
+							<div class="k-portlet">
+								<div class="k-portlet__body">
+									<div class="k-blog-post">
+										<h1 class="text-center k-blog-post__title  k-heading--lg k-heading--medium">
+											Windows 10: A guide to the updates
+										</h1>
+										<div class="k-blog-post__meta">
+											<div class="k-blog-post__date">
+												May 15, 2019
+											</div>
+											<div class="k-blog-post__author">
+												By <a href="" class="k-blog-post__link">Admin</a>
+											</div>
+											<div class="k-blog-post__comments">
+												11 Comments
+											</div>
+										</div>
+										<div class="k-blog-post__hero-image">
+											<img src="../assets/media/blog/8.jpg" class="k-blog-post__image">
+										</div>
+										<div class="k-blog-post__content">
+											<p>
+												The launch of a major Windows 10 update like the May 2019 Update isn’t
+												the end of a process — it’s really just the beginning. As soon as a big 
+												feature update is released, Microsoft quickly gets to work on improving
+												it by fixing bugs, releasing security patches, and occasionally adding 
+												new features.
+											</p>
+											<p>
+												Here we’ve summarized what you need to know about every Windows 10 update
+												being released to the public. First come updates to the currently shipping 
+												version of Windows 10 — version 1903, known as the May 2019 Update — with 
+												the most recent updates on top. (Note that the May 2019 Update is on a phased
+												rollout, so you may not have received it yet.) Below that are updates to version
+												1809, known as the October 2018 Update; version 1803, the April 2018 Update; 
+												version 1709, the Fall Creators Update; and finally updates to version 1703, 
+												the Creators Update. For each build, we’ve included the date of its initial 
+												release and a link to Microsoft’s announcement about it.
+											</p>
+											<h3>Windows 10 May 2019 Update (version 1903)
+											</h3>
+											<div class="k-blog-post__image text-center p-2">
+													<img src="../assets/media/blog/4.jpeg" class="k-blog-post__image">
+												</div>
+											<p>
+											<p>Version 1903, called the Windows 10 May 2019 Update, is the most recent feature 
+											update to Windows 10. Here’s a quick summary of what’s new for users in it.</p>
+											<p>
+											    Windows 10 Home and Pro users can now control whether to install the twice-yearly
+												feature updates like the Windows 10 May 2019 Update via a new “Download and install 
+												now” option. However, when users’ current version of Windows reaches what Microsoft
+												calls “end of service” — the point at which Microsoft no longer supports it — Windows 
+												10 will install the latest feature update automatically. End of service is typically 
+												18 months after a Windows 10 feature update is released.
+											</p>
+											<p>
+											Cortana and the search box have been separated. To perform a Cortana search, you can say 
+											“Hey Cortana” and speak your search, click the Cortana icon to the right of the search 
+											box and speak, or press the Windows key + C and speak. All other searches are done by 
+											Windows Search.
+											</p>
+											<p>
+											You can now use search to find files in any location on your PC, not just in default 
+											libraries and folders like OneDrive, Documents, Downloads, Music, Pictures, Videos, 
+											and Desktop. However, that requires indexing, which reduces laptop battery life and 
+											could slow down PC performance.
+											</p>
+											<p>
+											You can uninstall more built-in apps than previously, including 3D Viewer 
+											(previously called Mixed Reality Viewer), Calculator, Calendar, Groove Music, Mail, 
+											Movies & TV, Paint 3D, Snip & Sketch, Sticky Notes, and Voice Recorder
+											</p>
+											
+											<h3>Updates to the October 2018 Update (version 1809)
+											</h3>
+											<p>
+											    This build brings a major change to the way you update Windows 10. You no longer
+												have to accept every one of Microsoft’s twice-yearly feature updates such as the 
+												just released Windows 10 May 2019 Update (version 1903). When there’s a new 
+												feature update available, a “Download and install now” link appears in the Windows 
+												Update Settings pane. If you don’t want to install it, don’t click the link.
+											</p>
+											<p>
+											    However, there is one caveat: When your current version of Windows nears what 
+												Microsoft calls “end of service” — the point at which Microsoft no longer supports
+												it — Windows 10 will install the latest feature update.
+											</p>
+											<p>
+											   In addition, this update fixes more than 20 issues in the latest version of Windows 
+											   10, including one that caused Microsoft Edge to hide annotations added to a PDF file,
+											   such as inked notes, highlights and comments, and another that failed to record a local
+											   user’s last logon time even when the user had accessed the server’s network share.
+											</p>
+											<p>
+											    There are a handful of issues with this build, including one in which when attempting 
+												to print from Microsoft Edge or other Universal Windows Platform (UWP) applications 
+												you may receive the error, "Your printer has experienced an unexpected configuration 
+												problem. 0x80070007e." There may also be issues using the Preboot Execution Environment 
+												(PXE) to start a device from a Windows Deployment Services (WDS) server configured to 
+												use Variable Window Extension.
+											</p>	
+											<p>
+											    There are several issues in the build, including one in which when attempting to print 
+												from Microsoft Edge or other Universal Windows Platform (UWP) applications you may receive
+												the error "Your printer has experienced an unexpected configuration problem. 0x80070007e.
+												" There may also be issues using the Preboot Execution Environment (PXE) to start a device 
+												from a Windows Deployment Services (WDS) server configured to use Variable Window Extension.
+											</p>
+											<p>
+											What IT needs to know: Because this is a security update, it should be applied relatively soon. 
+											Over the next few weeks, check for reports about problematic issues, and if all seems well, apply the update.
+											</p>
+										</div>
+
+										<div class="k-blog-post__foot">
+											<div class="k-blog-post__author">
+												<div class="k-blog-post__profile">
+													<img src="../assets/media/users/300_21.jpg"
+														class="k-blog-post__image">
+												</div>
+												<div class="k-blog-post__label">
+													<span>Jim Rottinger ,</span> Author
+												</div>
+											</div>
+											<div class="k-blog-post__social">
+												<div class="k-blog-post__label">
+													Share this post:
+												</div>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-facebook-logo-button"></i></a>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-twitter-logo-button"></i></a>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-email-black-circular-button"></i></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<!-- end:: Content Body -->
+				</div>
+
+				<!-- end:: Content -->
+
+				<!-- begin:: Footer -->
+
+
+				<!-- end:: Footer -->
+			</div>
+		</div>
+	</div>
+
+	<!-- end:: Page -->
+
+
+
+	<!-- begin::Scrolltop -->
+	<div id="k_scrolltop" class="k-scrolltop">
+		<i class="la la-arrow-up"></i>
+	</div>
+
+	<!-- end::Scrolltop -->
+
+
+
+	<!-- begin::Global Config -->
+	<script>
+		var KAppOptions = {
+			"colors": {
+				"state": {
+					"brand": "#5d78ff",
+					"metal": "#c4c5d6",
+					"light": "#ffffff",
+					"accent": "#00c5dc",
+					"primary": "#5867dd",
+					"success": "#34bfa3",
+					"info": "#36a3f7",
+					"warning": "#ffb822",
+					"danger": "#fd3995",
+					"focus": "#9816f4"
+				},
+				"base": {
+					"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+					"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+				}
+			}
+		};
+	</script>
+
+	<!-- end::Global Config -->
+
+	<!--begin:: Global Mandatory Vendors -->
+	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+	<!--end:: Global Mandatory Vendors -->
+
+	<!--begin:: Global Optional Vendors -->
+
+	<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/theme/framework/vendors/sweetalert2/init.js" type="text/javascript"></script>
+
+	<!--end:: Global Optional Vendors -->
+
+	<!--begin::Global Theme Bundle -->
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+	<!--end::Global Theme Bundle -->
+
+	<!--begin::Global App Bundle -->
+	<script src="../assets/app/scripts/bundle/app.bundle.js" type="text/javascript"></script>
+
+	<!--end::Global App Bundle -->
+</body>
+
+<!-- end::Body -->
+
+</html>

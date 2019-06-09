@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<!-- begin::Head -->
+
+<head>
+	<meta charset="utf-8" />
+	<title>View Post | Learning How to Learn JavaScript</title>
+	<meta name="description" content="Blog list example">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				"families": ["Poppins:300,400,500,600,700", "Raleway:300,400,500,600,700"]
+			},
+			active: function () {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+	<!--begin::Page Custom Styles -->
+	<link href="../assets/custom/blog/list.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/custom/blog/post.css" rel="stylesheet" type="text/css">
+
+	<!--end::Page Custom Styles -->
+
+	<!--begin:: Global Mandatory Vendors -->
+	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet"
+		type="text/css" />
+
+	<!--end:: Global Mandatory Vendors -->
+
+	<!--begin:: Global Optional Vendors -->
+
+	<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+
+	<!--end:: Global Optional Vendors -->
+
+	<!--begin::Global Theme Styles -->
+	<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+
+	<!--end::Global Theme Styles -->
+
+	<!--begin::Layout Skins -->
+	<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+
+	<!--end::Layout Skins -->
+	<style>
+		body {
+			color: black;
+		}
+		.k-header.k-header--fixed {
+			position: fixed;
+			top: 0;
+			z-index: 97;
+			width: 100%;
+			left: 0;
+		}
+		.has-search .form-control {
+			padding-left: 2.375rem;
+			border: 1px solid #646c9a;
+		}
+		.has-search .form-control-feedback {
+			position: absolute;
+			z-index: 2;
+			display: block;
+			width: 2.375rem;
+			height: 2.375rem;
+			line-height: 3.375rem;
+			text-align: center;
+			pointer-events: none;
+			color: black;
+		}
+	</style>
+</head>
+
+<!-- end::Head -->
+
+<!-- begin::Body -->
+
+<body class="k-header--fixed k-header-mobile--fixed ">
+
+	<!-- begin:: Page -->
+
+	<!-- begin:: Header Mobile -->
+	<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
+		<div class="k-header-mobile__logo">
+			<a href="index.html">
+				<h4>IT Blog</h4>
+			</a>
+		</div>
+		<div class="k-header-mobile__toolbar">
+
+			<button class="k-header-mobile__toolbar-toggler" id="k_header_mobile_toggler"><span></span></button>
+
+		</div>
+	</div>
+
+	<!-- end:: Header Mobile -->
+	<div class="k-grid k-grid--hor k-grid--root">
+		<div class="k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page">
+
+
+			<div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper" id="k_wrapper">
+
+				<!-- begin:: Header -->
+				<div id="k_header" class="k-header k-grid__item  k-header--fixed ">
+
+					<!-- begin: Header Menu -->
+					<button class="k-header-menu-wrapper-close" id="k_header_menu_mobile_close_btn"><i
+							class="la la-close"></i></button>
+					<div class="k-header-menu-wrapper" id="k_header_menu_wrapper">
+						<div id="k_header_menu" class="k-header-menu k-header-menu-mobile ">
+							<ul class="k-menu__nav ">
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a href="index.html"
+										class="k-menu__link "><span class="k-menu__link-text">Home</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="technical-posts.html" class="k-menu__link "><span
+											class="k-menu__link-text">Programming</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="software-post.html" class="k-menu__link "><span
+											class="k-menu__link-text">Software Engineering</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu k-menu__item--rel "><a
+										href="blockchain-post.html" class="k-menu__link "><span
+											class="k-menu__link-text">Blockchain</span></a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<!-- end: Header Menu -->
+					<div class="k-header__topbar k-grid__item k-grid__item--fluid align-items-center">
+						<div class=" k-grid__item  align-items-center mx-2">
+
+							<a href="create-post.html" class="btn btn-success">Create your blog</a>
+
+						</div>
+						<div class=" k-grid__item  align-items-center mx-2">
+
+							<!--begin: Search -->
+
+							<a class="k-link" href="login.html">Login</a>
+							<span class="mx-2"> / </span>
+							<a class="k-link" href="register.html">Register</a>
+							<!--end: Search -->
+
+						</div>
+						<!--begin: Search -->
+						<form>
+							<div class="has-search">
+								<span class="fa fa-search form-control-feedback"></span>
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+						</form>
+
+						<!--end: Search -->
+
+
+
+					</div>
+
+				</div>
+
+				<!-- end:: Header -->
+
+				<!-- begin:: Content -->
+				<div class="k-content	k-grid__item k-grid__item--fluid k-grid k-grid--hor" id="k_content">
+
+
+
+					<!-- begin:: Content Body -->
+					<div class="k-content__body	k-grid__item k-grid__item--fluid" id="k_content_body">
+						<div class="row">
+							<div class="k-portlet">
+								<div class="k-portlet__body">
+									<div class="k-blog-post">
+										<h1 class="text-center k-blog-post__title  k-heading--lg k-heading--medium">
+											Blockchain And Its Application To The Education Sector
+										</h1>
+										<div class="k-blog-post__meta">
+											<div class="k-blog-post__date">
+												Nov 15, 2017
+											</div>
+											<div class="k-blog-post__author">
+												By <a href="" class="k-blog-post__link">Admin</a>
+											</div>
+											<div class="k-blog-post__comments">
+												30 Comments
+											</div>
+										</div>
+										<div class="k-blog-post__hero-image">
+											<img src="../assets/media/blog/blogchain.png" class="k-blog-post__image">
+										</div>
+										<div class="k-blog-post__content">
+											<p>
+												Wondering about what blockchain is and how can it be utilised in giant 
+												education sector? This article focuses on the potential of blockchain 
+												to create the next level of learning experiences for students as well 
+												as the education industry as a whole. As simple as said, if we use 
+												Blockchain Technology in Education Sector, it can very well do wonders 
+												for both the students and the tutors or examination cell alike.
+											</p>
+											<p>
+												Blockchain is a decentralised distributed ledger spread across many 
+												computers (nodes) without involving middlemen. And, every transaction 
+												on Blockchain is public, encrypted, synchronised ensuring transparency,
+												security and nominal administration cost.
+											</p>
+											<h3>1. Hurdles of Online Education.</h3>
+											<p>Handles the existing problems of online education. The biggest hurdles in 
+											any sort of online education is user retention and education completion rates. 
+											Blockchain technology in education sector offers solutions to these challenges. 
+											Further, the academic program can be tokenized to boost educational motivation.  
+											For example, if students are offered some amount of tokens on completion of online
+											course, they will definitely be motivated to do so.On the other hand, it can also 
+											be used to motivate tutors and educators. For example, on uploading certain amount
+											of tutorials and educational videos on platforms like YouTube and others, they 
+											can also be rewarded with tokens.</p>
+                                            <h3>2. Highest Level of Security.</h3>
+                                            <div class="k-blog-post__image text-center p-2">
+													<img src="../assets/media/blog/1.png" class="k-blog-post__image">
+												</div>
+											<p>
+											<p>The benefits of Blockchain technology in education sector are not just limited
+											to incentives. In fact, it also offers the biggest advantage of security. Security
+											of storing credentials, storing online degrees and certificates, badges, etc. 
+											In addition, the cross border payments are also highly secured as well as trusted.</p>
+											<h3>3. Utmost Transparency.</h3>
+											<p>On the blockchain platform, since any created / added block needs approval
+											of other involved parties, the chances are very rare of the record being fake or 
+											falsified. This approval criteria prevents students or educators from creating fake
+											certifications to claim that the candidate has passed or excelled at a particular 
+											course.</p>
+											<h3> 4. Global Assessment
+											</h3>
+											<p>Our existing education system of certification is not an ideal fit. It is 
+											paper-based and hence subject to fraud and loss. At a global level, mobile population 
+											is increasing by leaps and bounds. Hence, a centralised database of academic achievements
+											and individual credentials definitely makes sense. Here, the blockchain technology can
+											lend a helping hand. In this decentralised ledger, records pertaining to achievements
+											can be stored. These records can be assessed by anyone at a global level. For students 
+											or employees, moving out of native country to a foreign land, this can be of great help.
+											Universities or recruiters of other country can easily verify details and credentials.</p>
+										</div>
+
+										<div class="k-blog-post__foot">
+											<div class="k-blog-post__author">
+												<div class="k-blog-post__profile">
+													<img src="../assets/media/users/300_21.jpg"
+														class="k-blog-post__image">
+												</div>
+												<div class="k-blog-post__label">
+													<span>Jim Rottinger ,</span> Author
+												</div>
+											</div>
+											<div class="k-blog-post__social">
+												<div class="k-blog-post__label">
+													Share this post:
+												</div>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-facebook-logo-button"></i></a>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-twitter-logo-button"></i></a>
+												<a href="" class="k-blog-post__link"><i
+														class="flaticon-email-black-circular-button"></i></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<!-- end:: Content Body -->
+				</div>
+
+				<!-- end:: Content -->
+
+				<!-- begin:: Footer -->
+
+
+				<!-- end:: Footer -->
+			</div>
+		</div>
+	</div>
+
+	<!-- end:: Page -->
+
+
+
+	<!-- begin::Scrolltop -->
+	<div id="k_scrolltop" class="k-scrolltop">
+		<i class="la la-arrow-up"></i>
+	</div>
+
+	<!-- end::Scrolltop -->
+
+
+
+	<!-- begin::Global Config -->
+	<script>
+		var KAppOptions = {
+			"colors": {
+				"state": {
+					"brand": "#5d78ff",
+					"metal": "#c4c5d6",
+					"light": "#ffffff",
+					"accent": "#00c5dc",
+					"primary": "#5867dd",
+					"success": "#34bfa3",
+					"info": "#36a3f7",
+					"warning": "#ffb822",
+					"danger": "#fd3995",
+					"focus": "#9816f4"
+				},
+				"base": {
+					"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+					"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+				}
+			}
+		};
+	</script>
+
+	<!-- end::Global Config -->
+
+	<!--begin:: Global Mandatory Vendors -->
+	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+	<!--end:: Global Mandatory Vendors -->
+
+	<!--begin:: Global Optional Vendors -->
+
+	<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/theme/framework/vendors/sweetalert2/init.js" type="text/javascript"></script>
+
+	<!--end:: Global Optional Vendors -->
+
+	<!--begin::Global Theme Bundle -->
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+	<!--end::Global Theme Bundle -->
+
+	<!--begin::Global App Bundle -->
+	<script src="../assets/app/scripts/bundle/app.bundle.js" type="text/javascript"></script>
+
+	<!--end::Global App Bundle -->
+</body>
+
+<!-- end::Body -->
+
+</html>
