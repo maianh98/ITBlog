@@ -611,8 +611,12 @@
 				$('#post').DataTable();
 				$('#category').DataTable();
 
-				$('.edit').click(function(){
-					editHandler();
+				$('#category .edit').click(function () {
+				window.location.href = 'editor-category-edit.html'
+			    });
+		
+				$('#post .edit').click(function () {
+					window.location.href = 'editor-edit-post.html'
 				});
 	
 				$('.delete').click(function(){
